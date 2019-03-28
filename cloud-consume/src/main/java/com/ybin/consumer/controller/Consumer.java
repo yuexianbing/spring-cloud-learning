@@ -7,6 +7,7 @@ import com.ybin.provider.api.consumer.domain.ConsumerBo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,7 +18,7 @@ import org.springframework.web.client.RestTemplate;
  * @Describe:
  * @Author: bing.yue001
  */
-@RestController("/consumer")
+@RestController(value = "/consumer")
 public class Consumer {
 
     private static final int COUNT = 15;
@@ -43,7 +44,7 @@ public class Consumer {
         return "xxxxxx";
     }
 
-    @RequestMapping(value = "/testFenClient", method = RequestMethod.GET)
+    @RequestMapping(value = "/test-feign-client", method = RequestMethod.GET)
     public void testFenClient() {
         for (int i = 0; i < COUNT; i++) {
             ConsumerBo consumerBo = providerApi.getProvider(i+"");

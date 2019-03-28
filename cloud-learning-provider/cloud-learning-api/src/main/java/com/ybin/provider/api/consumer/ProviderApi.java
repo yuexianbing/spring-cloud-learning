@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @Describe:
  * @Author: bing.yue001
  */
-@FeignClient(value = "cloud-service", fallback = HystrixFallBack.class)
+@FeignClient(value = "cloud-service")
 public interface ProviderApi {
 
     /**

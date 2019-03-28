@@ -3,6 +3,7 @@ package com.ybin.provider.api.consumer.hystrix;
 import com.ybin.provider.api.consumer.ProviderApi;
 import com.ybin.provider.api.consumer.domain.ConsumerBo;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 /**
  * @Describe:
