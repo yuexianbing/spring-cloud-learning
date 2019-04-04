@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
  * @Author: bing.yue001
  */
 @Component
-public class HystrixFallBack implements ProviderApi {
+public class HystrixFallBackApiImpl implements ProviderApi {
 
     @Override
     public ConsumerBo getProvider(String id) {

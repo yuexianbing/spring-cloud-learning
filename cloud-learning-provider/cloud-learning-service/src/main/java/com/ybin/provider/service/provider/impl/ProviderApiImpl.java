@@ -20,7 +20,7 @@ public class ProviderApiImpl implements ProviderApi {
     private String serverName;
 
     @Override
-    public ConsumerBo getProvider(String id) {
+    public ConsumerBo getProvider(@PathVariable("id") String id) {
         ConsumerBo consumer = new ConsumerBo();
         consumer.setId(id);
         consumer.setPort(port);
