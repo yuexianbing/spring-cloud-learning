@@ -2,6 +2,7 @@ package com.ybin.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
@@ -11,9 +12,9 @@ import org.springframework.cloud.config.server.EnableConfigServer;
  * @description :
  */
 @EnableConfigServer
-@SpringBootApplication
-public class ConfigServiceApplication {
+@SpringBootApplication(exclude = DataSourceAutoConfiguration.class, scanBasePackages = {"com.ybin"})
+public class ApplicationConfigService {
     public static void main(String[] args) {
-        SpringApplication.run(ConfigServiceApplication.class);
+        SpringApplication.run(ApplicationConfigService.class);
     }
 }
