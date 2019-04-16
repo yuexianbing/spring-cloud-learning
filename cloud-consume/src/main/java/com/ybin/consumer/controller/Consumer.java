@@ -5,6 +5,7 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.ybin.provider.api.consumer.ProviderApi;
 import com.ybin.provider.api.consumer.domain.ConsumerBo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -18,10 +19,14 @@ import org.springframework.web.client.RestTemplate;
  * @Describe:
  * @Author: bing.yue001
  */
-@RestController(value = "/consumer")
+@RequestMapping(value = "/consumer")
+@Controller
 public class Consumer {
 
     private static final int COUNT = 15;
+
+    @Value("${test_value}")
+    private String testEvn;
 
     @Autowired
     private RestTemplate restTemplate;
@@ -54,5 +59,10 @@ public class Consumer {
 
     public String testHystrix(int a) {
         return "service is not use, parameter:" + a;
+    }
+
+    @RequestMapping(value = "/test-get-testEvn")
+    public void testGetTestEvn() {
+        System.out.println("从spring-cloud-config获取的配置:" + this.testEvn);
     }
 }
