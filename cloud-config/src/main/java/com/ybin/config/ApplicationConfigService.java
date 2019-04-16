@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
- * @author : <a href="mailto:bing.yue001@bkjk.com">bing.yue</a>
+ * @author : <a href="mailto:215203450@qq.com">bing.yue</a>
  * @version : 1.0
  * @date : 2019-4-13 12:29
  * @description :
