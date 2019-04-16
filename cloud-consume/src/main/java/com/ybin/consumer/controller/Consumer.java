@@ -19,12 +19,13 @@ import org.springframework.web.client.RestTemplate;
  * @Describe:
  * @Author: bing.yue001
  */
-@RestController(value = "/consumer")
+@RequestMapping(value = "/consumer")
+@Controller
 public class Consumer {
 
     private static final int COUNT = 15;
 
-    @Value("${test_evn}")
+    @Value("${test_value}")
     private String testEvn;
 
     @Autowired
