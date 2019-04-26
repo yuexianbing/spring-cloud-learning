@@ -10,6 +10,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.client.RestTemplate;
@@ -63,5 +64,11 @@ public class Consumer {
     @RequestMapping(value = "/test-get-testEvn")
     public void testGetTestEvn() {
         System.out.println("从spring-cloud-config获取的配置:" + this.testEvn);
+    }
+
+    @RequestMapping(value = "/query-order", method = RequestMethod.GET)
+    public ConsumerBo queryCashierRefundOrder(@RequestBody ConsumerBo consumerBo) {
+        System.out.println("==========" + consumerBo.toString());
+        return null;
     }
 }
