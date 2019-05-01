@@ -9,7 +9,7 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 /**
  * @Describe:
- * @Author: bing.yue001
+ * @Author: bing.yue
  */
 @Slf4j
 @EnableZuulProxy

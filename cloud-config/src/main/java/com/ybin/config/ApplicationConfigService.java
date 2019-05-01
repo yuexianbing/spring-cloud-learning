@@ -4,14 +4,16 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.config.server.EnableConfigServer;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
- * @author : <a href="mailto:bing.yue001@bkjk.com">bing.yue</a>
+ * @author : <a href="mailto:215203450@qq.com">bing.yue</a>
  * @version : 1.0
  * @date : 2019-4-13 12:29
  * @description :
  */
 @EnableConfigServer
+//@EnableEurekaClient
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class, scanBasePackages = {"com.ybin"})
 public class ApplicationConfigService {
     public static void main(String[] args) {

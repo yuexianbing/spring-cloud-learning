@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * @Describe:
- * @Author: bing.yue001
+ * @Author: bing.yue
  */
 @Configuration
 public class Config {
